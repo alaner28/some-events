@@ -1,0 +1,64 @@
+{
+	"pages": [ 
+		{
+			"path": "pages/main_page/main_page",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path" : "pages/warning_system/warning_system",
+			"style" : 
+			{
+				"navigationBarTitleText" : "预算实时监控"
+			}
+		},
+		{
+			"path" : "pages/ai_analysis/ai_analysis",
+			"style" : 
+			{
+				"navigationBarTitleText" : "智能预测成本风险"
+			}
+		},
+		{
+			"path" : "pages/cost_chart/cost_chart",
+			"style" : 
+			{
+				"navigationBarTitleText" : "成本趋势"
+			}
+		},
+		{
+			"path" : "pages/main_profile/main_profile",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		}
+		
+	],
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#007AFF",
+		"list": [
+			{
+				"pagePath": "pages/main_page/main_page",
+				"text": "首页",
+				"iconPath": "/static/home.png",
+				"selectedIconPath": "/static/home.png"
+			},
+			{
+				"pagePath": "pages/main_profile/main_profile",
+				"text": "我的",
+				"iconPath": "/static/user.png",
+				"selectedIconPath": "/static/user.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
