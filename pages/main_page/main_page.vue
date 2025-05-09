@@ -10,7 +10,7 @@
       <!-- 成本曲线 -->
       <view class="function-card" @click="topage('/pages/cost_chart/cost_chart')">
         <view class="card-content">
-          <uni-icons type="pie-chart" size="40" color="#1890FF"></uni-icons>
+          <image src="/static/analysis.png" style="height: 57rpx;width: 57rpx;padding: 15rpx;"></image>
           <text class="card-title">成本消耗曲线</text>
           <text class="card-desc">查看周/月/施工段成本趋势</text>
         </view>
@@ -18,7 +18,7 @@
       <!-- 预警系统 -->
       <view class="function-card" @click="topage('/pages/warning_system/warning_system')">
         <view class="card-content">
-          <uni-icons type="bell" size="40" color="#FF6A6A"></uni-icons>
+          <uni-icons type="eye" size="40" color="#FF6A6A"></uni-icons>
           <text class="card-title">红绿灯预警</text>
           <text class="card-desc">实时监控预算消耗状态</text>
         </view>
@@ -38,11 +38,28 @@
   </view>
 </template>
 
-<script setup>
-import { ref } from 'vue'
+<script setup lang='ts'>
+import { onMounted, ref } from 'vue'
+import uniIconsVue from '../../uni_modules/uni-icons/components/uni-icons/uni-icons.vue'
+import { storeToRefs } from 'pinia'
+import { useUserStore } from '../../store/useUserStore'
 
-const topage = (url) => {
+const userStore = useUserStore()
+const { displayName, formattedJoinDate } = storeToRefs(userStore)
+const { currentUser, defaultAvatars, meta } = storeToRefs(userStore)
+onMounted(()=>{
+	userStore.initializeUser()
+})
 
+const topage = (url:string) => {
+  if(!meta.value.isLoggedin){
+	  uni.showToast({
+	    title: '请登录',
+	    icon: 'error',
+	    duration: 2000
+	  });
+	  return;
+  }
   if (url.includes('main_page') || url.includes('main_profile')) {
     uni.switchTab({ url })
   } 
@@ -54,7 +71,7 @@ const topage = (url) => {
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .main-container {
   padding: 24rpx;
   background-color: #f5f7fa;
@@ -86,6 +103,7 @@ const topage = (url) => {
 
       &:active {
         transform: scale(0.98);
+		filter: brightness(0.95);
       }
 
       .card-content {
@@ -106,36 +124,6 @@ const topage = (url) => {
           text-align: center;
           line-height: 1.4;
         }
-      }
-    }
-  }
-
-  .tab-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100rpx;
-    background: #fff;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 -4rpx 12rpx rgba(0,0,0,0.06);
-
-    .tab-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8rpx;
-      color: #999;
-      font-size: 24rpx;
-
-      &.active {
-        color: #1890FF;
-      }
-
-      uni-icons {
-        font-size: 40rpx;
       }
     }
   }

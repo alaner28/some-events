@@ -23,76 +23,51 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.main-container {
+.main-container.data-v-3264d9be {
   padding: 24rpx;
   background-color: #f5f7fa;
   min-height: 100vh;
 }
-.main-container .header {
+.main-container .header.data-v-3264d9be {
   padding: 40rpx 0;
   text-align: center;
 }
-.main-container .header .title {
+.main-container .header .title.data-v-3264d9be {
   font-size: 38rpx;
   font-weight: 600;
   color: #1a1a1a;
 }
-.main-container .function-grid {
+.main-container .function-grid.data-v-3264d9be {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24rpx;
   padding: 0 20rpx;
 }
-.main-container .function-grid .function-card {
+.main-container .function-grid .function-card.data-v-3264d9be {
   background: #ffffff;
   border-radius: 16rpx;
   padding: 32rpx;
   box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
   transition: transform 0.2s;
 }
-.main-container .function-grid .function-card:active {
+.main-container .function-grid .function-card.data-v-3264d9be:active {
   transform: scale(0.98);
+  filter: brightness(0.95);
 }
-.main-container .function-grid .function-card .card-content {
+.main-container .function-grid .function-card .card-content.data-v-3264d9be {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20rpx;
 }
-.main-container .function-grid .function-card .card-content .card-title {
+.main-container .function-grid .function-card .card-content .card-title.data-v-3264d9be {
   font-size: 32rpx;
   font-weight: 500;
   color: #333;
 }
-.main-container .function-grid .function-card .card-content .card-desc {
+.main-container .function-grid .function-card .card-content .card-desc.data-v-3264d9be {
   font-size: 24rpx;
   color: #666;
   text-align: center;
   line-height: 1.4;
-}
-.main-container .tab-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100rpx;
-  background: #fff;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 0 -4rpx 12rpx rgba(0, 0, 0, 0.06);
-}
-.main-container .tab-bar .tab-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8rpx;
-  color: #999;
-  font-size: 24rpx;
-}
-.main-container .tab-bar .tab-item.active {
-  color: #1890FF;
-}
-.main-container .tab-bar .tab-item uni-icons {
-  font-size: 40rpx;
 }

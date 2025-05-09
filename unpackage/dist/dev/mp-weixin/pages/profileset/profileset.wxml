@@ -1,0 +1,1 @@
+<view class="main-container data-v-32d6ed29"><view class="section data-v-32d6ed29"><view class="list data-v-32d6ed29"><view wx:for="{{a}}" wx:for-item="item" wx:key="b" class="list-item data-v-32d6ed29" bindtap="{{item.c}}"><text class="data-v-32d6ed29">{{item.a}}</text></view></view></view></view>

@@ -1,22 +1,18 @@
 <template>
-	<view>
+	<view class="main-container">
 		
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				
-			}
-		},
-		methods: {
-			
-		}
-	}
+<script setup>
+	
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.main-container {
+  padding: 24rpx;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  
+}
 </style>

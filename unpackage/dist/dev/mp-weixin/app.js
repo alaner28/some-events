@@ -7,6 +7,7 @@ if (!Math) {
   "./pages/ai_analysis/ai_analysis.js";
   "./pages/cost_chart/cost_chart.js";
   "./pages/main_profile/main_profile.js";
+  "./pages/profileset/profileset.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -21,8 +22,10 @@ const _sfc_main = {
 };
 function createApp() {
   const app = common_vendor.createSSRApp(_sfc_main);
+  app.use(common_vendor.createPinia());
   return {
-    app
+    app,
+    Pinia: common_vendor.Pinia
   };
 }
 createApp().app.mount("#app");

@@ -1,0 +1,1 @@
+"use strict";const e=require("../../common/vendor.js"),o=require("../../store/useCountStore.js"),t=e.defineComponent({__name:"cost_chart",setup(e){let t=o.useCounterStore();return console.log(t.count),(e,o)=>({})}}),r=e._export_sfc(t,[["__scopeId","data-v-5f4acd56"]]);wx.createPage(r);

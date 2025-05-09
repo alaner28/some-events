@@ -33,6 +33,20 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/profileset/profileset",
+			"style" : 
+			{
+				"navigationBarTitleText" : "个人信息"
+			}
+		},
+		{
+			"path" : "pages/about_us/about_us",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 		
 	],

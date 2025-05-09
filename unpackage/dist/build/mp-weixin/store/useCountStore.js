@@ -1,0 +1,1 @@
+"use strict";const t=require("../common/vendor.js").defineStore("counter",{state:()=>({count:0,user:null}),getters:{doubleCount:t=>2*t.count},actions:{increment(){this.count++},async fetchUser(){const t=await api.getUser();this.user=t.data}}});exports.useCounterStore=t;
