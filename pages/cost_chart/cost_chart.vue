@@ -5,10 +5,7 @@
 </template>
 
 <script setup lang='ts'>
-	import { useCounterStore } from '../../store/useCountStore';
 	import { ref,reactive } from 'vue'
-	let counterStore = useCounterStore();
-	console.log(counterStore.count)
 </script>
 
 <style lang="scss" scoped>
